@@ -1,0 +1,282 @@
+array (
+  'name' => 'Turbopxl',
+  'pages' => 'node/*
+comment/*
+taxonomy/*
+admin/structure/taxonomy/*
+admin/structure/block/*',
+  'excludes' => 'edit-log
+edit-menu-description',
+  'iconpath' => '%FILES/turbueditor',
+  'spriteon' => '0',
+  'buttons' => 
+  array (
+    0 => 
+    array (
+      'title' => 'Bold',
+      'content' => '<strong>%TEXT%</strong>',
+      'icon' => 'bold.jpg',
+      'accesskey' => 'B',
+      'weight' => '0',
+    ),
+    1 => 
+    array (
+      'title' => 'Italic',
+      'content' => '<em>%TEXT%</em>',
+      'icon' => 'italic.jpg',
+      'accesskey' => 'I',
+      'weight' => '1',
+    ),
+    2 => 
+    array (
+      'title' => 'Underline',
+      'content' => '<ins>%TEXT%</ins>',
+      'icon' => 'underline.jpg',
+      'accesskey' => 'U',
+      'weight' => '2',
+    ),
+    3 => 
+    array (
+      'title' => 'Strikethrough',
+      'content' => '<del>%TEXT%</del>',
+      'icon' => 'strike.jpg',
+      'accesskey' => 'S',
+      'weight' => '3',
+    ),
+    4 => 
+    array (
+      'title' => 'tpl:dot',
+      'content' => '',
+      'icon' => 'separator.png',
+      'accesskey' => '',
+      'weight' => '4',
+    ),
+    5 => 
+    array (
+      'title' => 'Headings',
+      'content' => 'js: E.tagChooser([
+ [\'h1\', \'Heading1\'],
+ [\'h2\', \'Heading2\'],
+ [\'h3\', \'Heading3\'],
+ [\'h4\', \'Heading4\'],
+ [\'h5\', \'Heading5\'],
+ [\'h6\', \'Heading6\']
+]);',
+      'icon' => 'heading.jpg',
+      'accesskey' => 'H',
+      'weight' => '5',
+    ),
+    6 => 
+    array (
+      'title' => 'Ordered list',
+      'content' => 'js: E.wrapLines(\'<ol>\\n\', \'  <li>\', \'</li>\', \'\\n</ol>\');',
+      'icon' => 'ol.jpg',
+      'accesskey' => 'O',
+      'weight' => '6',
+    ),
+    7 => 
+    array (
+      'title' => 'Unordered list',
+      'content' => 'js: E.wrapLines(\'<ul>\\n\', \'  <li>\', \'</li>\', \'\\n</ul>\');',
+      'icon' => 'ul.jpg',
+      'accesskey' => 'N',
+      'weight' => '7',
+    ),
+    8 => 
+    array (
+      'title' => 'Quote',
+      'content' => '<blockquote>%TEXT%</blockquote>',
+      'icon' => 'blockquote.jpg',
+      'accesskey' => 'Q',
+      'weight' => '8',
+    ),
+    9 => 
+    array (
+      'title' => 'Code',
+      'content' => '<code>%TEXT%</code>',
+      'icon' => 'code.jpg',
+      'accesskey' => 'D',
+      'weight' => '9',
+    ),
+    10 => 
+    array (
+      'title' => 'tpl:dot',
+      'content' => '',
+      'icon' => 'separator.png',
+      'accesskey' => '',
+      'weight' => '10',
+    ),
+    11 => 
+    array (
+      'title' => 'Link',
+      'content' => 'js:
+var form = [
+ {name: \'href\', title: \'Link URL\', required: true, suffix: E.imce.button(\'attr_href\')},
+ {name: \'html\', title: \'Link text\'},
+ {name: \'title\', title: \'Link title\'}
+];
+E.tagDialog(\'a\', form, {title: \'Insert/edit link\'});',
+      'icon' => 'link.jpg',
+      'accesskey' => 'L',
+      'weight' => '11',
+    ),
+    12 => 
+    array (
+      'title' => 'Insert/edit image',
+      'content' => 'js:
+var form = [
+ {name: \'src\', title: \'Image URL\', required: true, suffix: E.imce.button(\'attr_src\')},
+ {name: \'width\', title: \'Width x Height\', suffix: \' x \', getnext: true, attributes: {size: 3}},
+ {name: \'height\', attributes: {size: 3}},
+ {name: \'alt\', title: \'Alternative text\', required: true}
+];
+E.tagDialog(\'img\', form, {title: \'Insert/edit image\'});',
+      'icon' => 'upload-image.jpg',
+      'accesskey' => 'M',
+      'weight' => '12',
+    ),
+    13 => 
+    array (
+      'title' => 'Upload',
+      'content' => 'js: E.showFileSelectionDialog();',
+      'icon' => 'upload.jpg',
+      'accesskey' => '',
+      'weight' => '13',
+    ),
+    14 => 
+    array (
+      'title' => 'Symbol',
+      'content' => 'js:
+//Extend/modify the chars as you like
+var chars = \'$€£¥©®™§ß‹›«»—\';
+chars += \'←↑→↓↔\';
+for (var chr, links = \'\', i= 0; chr = chars.charAt(i); i++) {
+  links += \'<a href="#" title="\'+ chr +\'">\'+ chr +\'</a>\';
+}
+links = BUE.$html(links).click(function(){
+  E.replaceSelection(this.title);
+  return false;
+});
+var content = $(\'<div class="bue-spchars"></div>\').append(links);
+E.quickPop.open(content, \'slideDown\');',
+      'icon' => 'text-symbol.jpg',
+      'accesskey' => '',
+      'weight' => '14',
+    ),
+    15 => 
+    array (
+      'title' => 'Color Picker',
+      'content' => 'js:
+var htmlTag = \'span\';// HTML tag to wrap the text
+var cssProp = \'color\';// CSS property to populate
+var palette = \'0369cf\';//hex palette containing chars from 0123456789abcdef
+var len = palette.length;
+var links = \'\';
+for (var color, i=0; i < len; i++) for (var j=0; j < len; j++) for (var k=0; k < len; k++) {
+    color = \'#\' + palette.charAt(j) + palette.charAt(i) + palette.charAt(k);
+    links += \'<a href="#" title="\'+ color +\'" style="display: inline-block; padding: 6px; margin: 0 0 1px 2px; border: 1px outset #000; text-decoration: none !important; font-size: 1px; background-color: \'+ color +\'"></a>\';
+}
+links = BUE.$html(links).click(function(){
+  E.tagSelection(\'<\' + htmlTag + \' style="color:\' + this.title + \';">\', \'</\' + htmlTag + \'>\');
+  return false;
+});
+var content = $(\'<div class="bue-color-box" style="width: 288px;"></div>\').append(links);
+E.quickPop.open(content, \'slideDown\');',
+      'icon' => 'text-color-2.jpg',
+      'accesskey' => 'C',
+      'weight' => '15',
+    ),
+    16 => 
+    array (
+      'title' => 'Table',
+      'content' => 'js:
+E.quickPop.open(\'<table id="bue-quick-table" style="width: auto; height: auto;"> <tr><td></td><td></td><td></td></tr> <tr><td></td><td></td><td></td></tr> <tr><td></td><td></td><td></td></tr> </table>\');
+
+quickTableX = -1, quickTableY = -1;
+
+quickTableTd = function () {
+  $(this).css(
+  {width: \'16px\', height: \'16px\', border: \'1px solid #ddd\', padding: \'5px\', backgroundColor: \'white\', cursor: \'pointer\'}
+  ).html(\'&nbsp;\').mouseover(quickTableTdOver).click(quickTableTdClick);
+};
+
+quickTableTdOver = function () {
+  var row = this.parentNode, table = row.parentNode, X = this.cellIndex, Y = row.rowIndex;
+
+  if (X == row.cells.length - 1) {
+    for (var i = table.rows.length; i; i--) quickTableTd.apply(table.rows[i-1].insertCell(X+1));
+  }
+  if (Y == table.rows.length - 1) {
+    var _row = table.insertRow(Y+1);
+    for (var i = 0, t = row.cells.length; i < t; i++) quickTableTd.apply(_row.insertCell(i));
+  }
+  
+  var aX = X < quickTableX ? [quickTableX, X, quickTableY, \'white\'] : [X, quickTableX, Y, \'blue\'];
+  var aY = Y < quickTableY ? [quickTableY, Y, quickTableX, \'white\'] : [Y, quickTableY, X, \'blue\'];
+  for (var i = aX[0]; i > aX[1]; i--) for (var j = aX[2]; j > -1; j--) {
+    table.rows[j].cells[i].style.backgroundColor = aX[3];
+  }
+  for (var i = aY[0]; i > aY[1]; i--) for (var j = aY[2]; j > -1; j--) {
+    table.rows[i].cells[j].style.backgroundColor = aY[3];
+  }
+  
+  quickTableX = X, quickTableY = Y;
+};
+
+quickTableTdClick = function () {
+  var cells = \'\', rows = \'\';
+  for (var i = quickTableX; i > -1 ; i--) {
+    cells += \'  <td></td>\\n\';
+  }
+  for (var i = quickTableY; i > -1 ; i--) {
+    rows += \'\\n<tr>\\n\'+ cells +\'</tr>\';
+  }
+  E.replaceSelection(\'<table>\'+ rows +\'\\n</table>\', \'end\');
+};
+
+$(\'#bue-quick-table td\').each(quickTableTd);',
+      'icon' => 'table.jpg',
+      'accesskey' => '',
+      'weight' => '16',
+    ),
+    17 => 
+    array (
+      'title' => 'tpl:dot',
+      'content' => '',
+      'icon' => 'separator.png',
+      'accesskey' => '',
+      'weight' => '17',
+    ),
+    18 => 
+    array (
+      'title' => 'Teaser break',
+      'content' => '<!--break-->',
+      'icon' => 'break.jpg',
+      'accesskey' => '',
+      'weight' => '18',
+    ),
+    19 => 
+    array (
+      'title' => 'Preview',
+      'content' => 'js: E.prv();',
+      'icon' => 'view.jpg',
+      'accesskey' => '',
+      'weight' => '19',
+    ),
+    20 => 
+    array (
+      'title' => 'Help',
+      'content' => 'js: E.help(\'fadeIn\');',
+      'icon' => 'help.jpg',
+      'accesskey' => '',
+      'weight' => '20',
+    ),
+  ),
+  'icons' => 
+  array (
+  ),
+  'library' => 
+  array (
+    '%BUEDITOR/library/bue.min.default.js' => '',
+  ),
+)
