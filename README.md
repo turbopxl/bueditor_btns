@@ -3,11 +3,12 @@ bueditor_btns
 
 Custom buttons for bueditor module. Tested on drupal-7.x. versions.
 
-Currently there are 3 groups of buttons:
- 1. Bold, Italic, Underline, Strikethrough, Superscript text, Subscript text, Headings, Text align buttons, Ordered/Unordered lists, Quotes, Code
- 2. Insert link, Image (from url), Upload file (One Click upload module is required - https://drupal.org/project/ocupload),
+Currently there are 4 groups of buttons:
+ 1. Bold, Italic, Underline, Strikethrough, Superscript text, Subscript text, 
+ 3. Headings, Text align buttons, Ordered/Unordered lists, Quotes, Code
+ 3. Insert link, Image (from url), Upload file (One Click upload module is required - https://drupal.org/project/ocupload),
    Insert symbol, Text color, Insert table, Delete html tags (select text with html tags and click)
- 3. Teaser break, Preview, Help.
+ 4. Teaser break, Preview, Help, Undo, Redo
 
 
 To enable:

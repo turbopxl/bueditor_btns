@@ -305,7 +305,7 @@ $(\'#bue-quick-table td\').each(quickTableTd);',
       'accesskey' => '',
       'weight' => '25',
     ),
-    6 => 
+    26 => 
     array (
       'title' => 'Preview',
       'content' => 'js: E.prv();',
@@ -321,6 +321,22 @@ $(\'#bue-quick-table td\').each(quickTableTd);',
       'accesskey' => '',
       'weight' => '27',
     ),
+    28 => 
+    array (
+      'title' => 'Undo',
+      'content' => 'js: E.undo();',
+      'icon' => 'undo.jpg',
+      'accesskey' => 'Y',
+      'weight' => '28',
+    ),
+    29 => 
+    array (
+      'title' => 'Redo',
+      'content' => 'js: E.redo();',
+      'icon' => 'redo.jpg',
+      'accesskey' => 'Z',
+      'weight' => '29',
+    ),
   ),
   'icons' => 
   array (
@@ -328,5 +344,6 @@ $(\'#bue-quick-table td\').each(quickTableTd);',
   'library' => 
   array (
     '%BUEDITOR/library/bue.min.default.js' => '',
+    '%BUEDITOR/library/bue.history.js' => '',
   ),
 )
