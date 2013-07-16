@@ -1,5 +1,5 @@
 array (
-  'name' => 'Turbopxl',
+  'name' => 'Turbueditor',
   'pages' => 'node/*
 comment/*
 taxonomy/*
@@ -43,15 +43,29 @@ edit-menu-description',
       'accesskey' => 'S',
       'weight' => '3',
     ),
-    4 => 
+	4 => 
+    array (
+      'title' => 'Superscript text',
+      'content' => '<sup>%TEXT%</sup>',
+      'icon' => 'sup.jpg',
+      'weight' => '4',
+    ),
+	5 => 
+    array (
+      'title' => 'Subscript text',
+      'content' => '<sub>%TEXT%</sub>',
+      'icon' => 'sub.jpg',
+      'weight' => '5',
+    ),
+    6 => 
     array (
       'title' => 'tpl:dot',
       'content' => '',
       'icon' => 'separator.png',
       'accesskey' => '',
-      'weight' => '4',
+      'weight' => '6',
     ),
-    5 => 
+    7=> 
     array (
       'title' => 'Headings',
       'content' => 'js: E.tagChooser([
@@ -64,49 +78,77 @@ edit-menu-description',
 ]);',
       'icon' => 'heading.jpg',
       'accesskey' => 'H',
-      'weight' => '5',
+      'weight' => '7',
     ),
-    6 => 
+	8 => 
+    array (
+      'title' => 'Align left',
+      'content' => '<div style="text-align: left;">%TEXT%</div>',
+      'icon' => 'align-left.jpg',
+      'weight' => '8',
+    ),	
+	9 => 
+    array (
+      'title' => 'Align center',
+      'content' => '<div style="text-align: center;">%TEXT%</div>',
+      'icon' => 'align-center.jpg',
+      'weight' => '9',
+    ),	
+	10 => 
+    array (
+      'title' => 'Align right',
+      'content' => '<div style="text-align: right;">%TEXT%</div>',
+      'icon' => 'align-right.jpg',
+      'weight' => '10',
+    ),
+	11 => 
+    array (
+      'title' => 'Align justify',
+      'content' => '<div style="text-align: right;">%TEXT%</div>',
+      'icon' => 'align-justify.jpg',
+      'weight' => '11',
+    ),	
+    12 => 
     array (
       'title' => 'Ordered list',
       'content' => 'js: E.wrapLines(\'<ol>\\n\', \'  <li>\', \'</li>\', \'\\n</ol>\');',
       'icon' => 'ol.jpg',
       'accesskey' => 'O',
-      'weight' => '6',
+      'weight' => '12',
     ),
-    7 => 
+    13 => 
     array (
       'title' => 'Unordered list',
       'content' => 'js: E.wrapLines(\'<ul>\\n\', \'  <li>\', \'</li>\', \'\\n</ul>\');',
       'icon' => 'ul.jpg',
       'accesskey' => 'N',
-      'weight' => '7',
+      'weight' => '13',
     ),
-    8 => 
+    14 => 
     array (
       'title' => 'Quote',
       'content' => '<blockquote>%TEXT%</blockquote>',
       'icon' => 'blockquote.jpg',
       'accesskey' => 'Q',
-      'weight' => '8',
+      'weight' => '14',
     ),
-    9 => 
+    15 => 
     array (
       'title' => 'Code',
       'content' => '<code>%TEXT%</code>',
       'icon' => 'code.jpg',
       'accesskey' => 'D',
-      'weight' => '9',
+      'weight' => '15',
     ),
-    10 => 
+    16 => 
     array (
       'title' => 'tpl:dot',
       'content' => '',
       'icon' => 'separator.png',
       'accesskey' => '',
-      'weight' => '10',
+      'weight' => '16',
     ),
-    11 => 
+    17 => 
     array (
       'title' => 'Link',
       'content' => 'js:
@@ -118,9 +160,9 @@ var form = [
 E.tagDialog(\'a\', form, {title: \'Insert/edit link\'});',
       'icon' => 'link.jpg',
       'accesskey' => 'L',
-      'weight' => '11',
+      'weight' => '17',
     ),
-    12 => 
+    18 => 
     array (
       'title' => 'Insert/edit image',
       'content' => 'js:
@@ -133,23 +175,23 @@ var form = [
 E.tagDialog(\'img\', form, {title: \'Insert/edit image\'});',
       'icon' => 'upload-image.jpg',
       'accesskey' => 'M',
-      'weight' => '12',
+      'weight' => '18',
     ),
-    13 => 
+    19 => 
     array (
       'title' => 'Upload',
       'content' => 'js: E.showFileSelectionDialog();',
       'icon' => 'upload.jpg',
       'accesskey' => '',
-      'weight' => '13',
+      'weight' => '19',
     ),
-    14 => 
+    20 => 
     array (
       'title' => 'Symbol',
       'content' => 'js:
 //Extend/modify the chars as you like
 var chars = \'$€£¥©®™§ß‹›«»—\';
-chars += \'←↑→↓↔\';
+chars += \'←↑→↓↔↕↨≈≠≤≥\';
 for (var chr, links = \'\', i= 0; chr = chars.charAt(i); i++) {
   links += \'<a href="#" title="\'+ chr +\'">\'+ chr +\'</a>\';
 }
@@ -161,9 +203,9 @@ var content = $(\'<div class="bue-spchars"></div>\').append(links);
 E.quickPop.open(content, \'slideDown\');',
       'icon' => 'text-symbol.jpg',
       'accesskey' => '',
-      'weight' => '14',
+      'weight' => '20',
     ),
-    15 => 
+    21 => 
     array (
       'title' => 'Color Picker',
       'content' => 'js:
@@ -184,9 +226,9 @@ var content = $(\'<div class="bue-color-box" style="width: 288px;"></div>\').app
 E.quickPop.open(content, \'slideDown\');',
       'icon' => 'text-color-2.jpg',
       'accesskey' => 'C',
-      'weight' => '15',
+      'weight' => '21',
     ),
-    16 => 
+    22 => 
     array (
       'title' => 'Table',
       'content' => 'js:
@@ -237,39 +279,47 @@ quickTableTdClick = function () {
 $(\'#bue-quick-table td\').each(quickTableTd);',
       'icon' => 'table.jpg',
       'accesskey' => '',
-      'weight' => '16',
+      'weight' => '22',
     ),
-    17 => 
+	23 => 
+    array (
+      'title' => 'Delete tags',
+      'content' => 'js: E.replaceSelection(E.getSelection().replace(new RegExp(\'</?(abbr|acronym|address|b|big|blockquote|cite|code|del|em|font|i|ins|kbd|pre|s|small|span|strike|strong|sub|sup|table|td|tr|th|thead|tbody|u)(\\s[^>]*)?>\', \'g\'), \'\'));',
+      'icon' => 'delete.jpg',
+      'accesskey' => '',
+      'weight' => '23',
+    ),
+    24 => 
     array (
       'title' => 'tpl:dot',
       'content' => '',
       'icon' => 'separator.png',
       'accesskey' => '',
-      'weight' => '17',
+      'weight' => '24',
     ),
-    18 => 
+    25 => 
     array (
       'title' => 'Teaser break',
       'content' => '<!--break-->',
       'icon' => 'break.jpg',
       'accesskey' => '',
-      'weight' => '18',
+      'weight' => '25',
     ),
-    19 => 
+    6 => 
     array (
       'title' => 'Preview',
       'content' => 'js: E.prv();',
       'icon' => 'view.jpg',
       'accesskey' => '',
-      'weight' => '19',
+      'weight' => '26',
     ),
-    20 => 
+    27 => 
     array (
       'title' => 'Help',
       'content' => 'js: E.help(\'fadeIn\');',
       'icon' => 'help.jpg',
       'accesskey' => '',
-      'weight' => '20',
+      'weight' => '27',
     ),
   ),
   'icons' => 
