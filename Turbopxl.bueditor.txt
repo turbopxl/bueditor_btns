@@ -83,28 +83,28 @@ edit-menu-description',
 	8 => 
     array (
       'title' => 'Align left',
-      'content' => '<div style="text-align: left;">%TEXT%</div>',
+      'content' => '<p style="text-align: left;">%TEXT%</p>',
       'icon' => 'align-left.jpg',
       'weight' => '8',
     ),	
 	9 => 
     array (
       'title' => 'Align center',
-      'content' => '<div style="text-align: center;">%TEXT%</div>',
+      'content' => '<p style="text-align: center;">%TEXT%</p>',
       'icon' => 'align-center.jpg',
       'weight' => '9',
     ),	
 	10 => 
     array (
       'title' => 'Align right',
-      'content' => '<div style="text-align: right;">%TEXT%</div>',
+      'content' => '<p style="text-align: right;">%TEXT%</p>',
       'icon' => 'align-right.jpg',
       'weight' => '10',
     ),
 	11 => 
     array (
       'title' => 'Align justify',
-      'content' => '<div style="text-align: right;">%TEXT%</div>',
+      'content' => '<p style="text-align: justify;">%TEXT%</p>',
       'icon' => 'align-justify.jpg',
       'weight' => '11',
     ),	
